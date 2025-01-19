@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+<action>
+	<icon>utilities-terminal</icon>
+	<name>Open Terminal Here</name>
+	<submenu></submenu>
+	<unique-id>1734915917449431-1</unique-id>
+	<command>kitty --directory %f</command>
+	<description>Example for a custom action</description>
+	<range></range>
+	<patterns>*</patterns>
+	<startup-notify/>
+	<directories/>
+</action>
+<action>
+	<icon>accessories-archiver</icon>
+	<name>Zip</name>
+	<submenu>Archive</submenu>
+	<unique-id>1735347031001770-4</unique-id>
+	<command>zip -r %n %n</command>
+	<description>Compress all files into a .zip file</description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<directories/>
+</action>
+<action>
+	<icon>accessories-archiver</icon>
+	<name>Zip &amp; Replace</name>
+	<submenu>Archive</submenu>
+	<unique-id>1735346692930068-1</unique-id>
+	<command>zip -rm %n %n</command>
+	<description>test</description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<directories/>
+</action>
+<action>
+	<icon>accessories-archiver</icon>
+	<name>Extract here...</name>
+	<submenu>Extract</submenu>
+	<unique-id>1735347873505601-5</unique-id>
+	<command>unzip %n</command>
+	<description>Extract all conents to the current directory</description>
+	<range>*</range>
+	<patterns>*zip</patterns>
+	<directories/>
+	<audio-files/>
+	<image-files/>
+	<other-files/>
+	<text-files/>
+	<video-files/>
+</action>
+<action>
+	<icon>accessories-archiver</icon>
+	<name>Extract &amp; Replace</name>
+	<submenu>Extract</submenu>
+	<unique-id>1735348716818010-6</unique-id>
+	<command>unzip %n &amp;&amp; rm %n</command>
+	<description>Extracts and then removes the archive after</description>
+	<range>*</range>
+	<patterns>*zip</patterns>
+	<other-files/>
+</action>
+<action>
+	<icon>accessories-archiver</icon>
+	<name>Compress</name>
+	<submenu>Archive</submenu>
+	<unique-id>1735349317780352-7</unique-id>
+	<command>zpaq a [%n].archiving %n &amp;&amp; mv [%n].archiving [%n]</command>
+	<description>Smallest form of compression</description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<directories/>
+</action>
+<action>
+	<icon>accessories-archiver</icon>
+	<name>Compress &amp; Replace</name>
+	<submenu>Archive</submenu>
+	<unique-id>1735349812982848-8</unique-id>
+	<command>zpaq a [%n].archiving %n &amp;&amp; mv [%n].archiving [%n] &amp;&amp; rm -rf %n</command>
+	<description>Compresses to a tiny archive and then replaces it</description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<directories/>
+</action>
+<action>
+	<icon>cm_extractfiles</icon>
+	<name>Uncompress &amp; Replace</name>
+	<submenu>Extract</submenu>
+	<unique-id>1735350145978449-9</unique-id>
+	<command>mv %n %n.uncompressing &amp;&amp; zpaq x %n.uncompressing &amp;&amp; rm %n.uncompressing </command>
+	<description></description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<other-files/>
+</action>
+<action>
+	<icon>preferences-desktop-keyboard-shortcuts</icon>
+	<name>Copy Symlink</name>
+	<submenu>Shortcuts</submenu>
+	<unique-id>1737323339023764-1</unique-id>
+	<command>echo &quot;ln -s %f %n\*&quot; | wl-copy</command>
+	<description></description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<directories/>
+	<audio-files/>
+	<image-files/>
+	<other-files/>
+	<text-files/>
+	<video-files/>
+</action>
+<action>
+	<icon>preferences-desktop-keyboard-shortcuts</icon>
+	<name>Paste Symlink</name>
+	<submenu>Shortcuts</submenu>
+	<unique-id>1737324035929327-2</unique-id>
+	<command>cd %f ; echo &quot;$(wl-paste)&quot; | bash</command>
+	<description>Paste the symlink</description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<directories/>
+	<audio-files/>
+	<image-files/>
+	<other-files/>
+	<text-files/>
+	<video-files/>
+</action>
+</actions>
